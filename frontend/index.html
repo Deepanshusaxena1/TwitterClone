@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js">
+    </script>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hello</title>
+    
+</head>
+
+<body>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js" type="module"></script>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h3>Twitter Example</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Following</a>
+            </ul>
+        </nav>
+        <div class="page-content container-fluid" id="app">
+            <div class="row">
+
+                <div class="col-md-7 col-sm-7 card ">
+                    
+                    <h2>Feed</h2>
+                    <div class="update-feed">
+
+                        <textarea type="text" value="" class="form-control" v-model="content.tweet"
+                            placeholder="Say Something..."></textarea>
+                        <button type="submit" class="btn btn-primary" @click="submit()">
+                            Post</button>
+                    </div>
+                    <div v-for="(tweet, idx) in tweets" :key="idx">
+
+                        <div class="card feed">
+                            <div class="user-info row">
+                                <span class="profile-pic col-md-2"></span>
+                                <span class="username col-md-6">{{tweet.user.username}}</span>
+                            </div>
+
+                            <div class="tweet">
+                                 
+                                {{tweet.content}}
+                            </div>
+                            <div class="icons">
+                                <!-- <span v-if="">
+                                    <a href="javascript:void(0)"> <i class="fa fa-thumbs-up" style="font-size:24px;" aria-hidden="true"></i></a>
+                                </span>
+                                <span v-else> -->
+                                    <a href="javascript:void(0)" @click="like_tweet(users.id,tweet.id)"><i style="font-size:24px"
+                                        class="fa">&#xf087;</i></a>
+                                <!-- </span> -->
+                                
+                                        <a href="javascript:void(0)"><i style="font-size:24px;margin-left:30px;" class="fa fa-comments-o"
+                                    aria-hidden="true"></i></a>
+                                    <input type="text" value="" class="form-control" v-model="comments.content" id="comment" placeholder="Write a comment...">
+                                    <button type="submit" class="btn btn-primary" @click="comment_post(users.id,tweet.id)">Post</button>
+                                    
+                                    
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-5 col-sm-5 account-info">
+                    <div class="user-info row"><span class="profile-pic col-md-2"></span><span
+                            class="username col-md-6">{{users.first_name}} {{users.last_name}}</span>
+                    </div>
+                    <p class="account-user">{{users.username}}</p>
+                </div>
+
+
+            </div>
+            <!--row-->
+        </div>
+        <!--page-content-->
+    </div>
+    <!--wrapper-->
+
+<script>
+    $(document).ready(function() {
+   $('#comment').hide();
+});
+ 
+
+</script>
+
+
+
+
+</body>
+
+</html>

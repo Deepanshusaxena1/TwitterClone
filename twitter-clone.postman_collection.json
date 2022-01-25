@@ -1,0 +1,991 @@
+{
+	"info": {
+		"_postman_id": "16bba63c-20f6-4bdf-9fa1-66a51d9b1174",
+		"name": "twitter-clone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:8000/feed/tweet/fetch?tweet_id=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/feed/tweet/fetch?tweet_id=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"feed",
+						"tweet",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "tweet_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "127.0.0.1:8000/feed/tweet/fetch?tweet_id=1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/feed/tweet/fetch?tweet_id=1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"feed",
+								"tweet",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "tweet_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 25 Jan 2022 13:52:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "359"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"tweet_data\": {\n        \"id\": 1,\n        \"comments\": [],\n        \"likes\": [],\n        \"user\": {\n            \"id\": 1,\n            \"first_name\": \"Deepanshu\",\n            \"last_name\": \"Saxena\",\n            \"email\": \"saxenad765@gmail.com\",\n            \"username\": \"saxenad765@gmail.com\",\n            \"image_url\": null\n        },\n        \"content\": \"Hey, I just joined it.\",\n        \"is_deleted\": false,\n        \"created_at\": \"2022-01-25T13:51:35.703580Z\",\n        \"updated_at\": \"2022-01-25T13:51:35.703615Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "127.0.0.1:8000/feed/comment/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"hi\",\n    \"user\": 1,\n    \"tweet\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/feed/comment/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"feed",
+						"comment",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "127.0.0.1:8000/feed/comment/create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"hi\",\n    \"user\": 1,\n    \"tweet\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/feed/comment/create",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"feed",
+								"comment",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 25 Jan 2022 13:52:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "178"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"comment_data\": {\n        \"id\": 1,\n        \"content\": \"hi\",\n        \"is_deleted\": false,\n        \"created_at\": \"2022-01-25T13:52:20.876259Z\",\n        \"updated_at\": \"2022-01-25T13:52:20.876292Z\",\n        \"user\": 1,\n        \"tweet\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "127.0.0.1:8000/feed/comment/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"content\": \"Hey, Hi 2.0\",\n        \"user\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/feed/tweet/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"feed",
+						"tweet",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "127.0.0.1:8000/feed/comment/create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"content\": \"Hey, Hi 2.0\",\n        \"user\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/feed/tweet/create",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"feed",
+								"tweet",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 25 Jan 2022 13:52:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"tweet_data\": {\n        \"id\": 2,\n        \"content\": \"Hey, Hi 2.0\",\n        \"is_deleted\": false,\n        \"created_at\": \"2022-01-25T13:52:49.475792Z\",\n        \"updated_at\": \"2022-01-25T13:52:49.475825Z\",\n        \"user\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "127.0.0.1:8000/feed/comment?comment_id=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/feed/comment/fetch?comment_id=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"feed",
+						"comment",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "comment_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "127.0.0.1:8000/feed/comment?comment_id=1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/feed/comment/fetch?comment_id=1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"feed",
+								"comment",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "comment_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 25 Jan 2022 13:53:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "178"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"comment_data\": {\n        \"id\": 1,\n        \"content\": \"hi\",\n        \"is_deleted\": false,\n        \"created_at\": \"2022-01-25T13:52:20.876259Z\",\n        \"updated_at\": \"2022-01-25T13:52:20.876292Z\",\n        \"user\": 1,\n        \"tweet\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "127.0.0.1:8000/feed/tweet/fetch_comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/feed/tweet/fetch_comments?tweet_id=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"feed",
+						"tweet",
+						"fetch_comments"
+					],
+					"query": [
+						{
+							"key": "tweet_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "127.0.0.1:8000/feed/tweet/fetch_comments",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/feed/tweet/fetch_comments?tweet_id=1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"feed",
+								"tweet",
+								"fetch_comments"
+							],
+							"query": [
+								{
+									"key": "tweet_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 25 Jan 2022 13:53:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "176"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"comments\": [\n        {\n            \"id\": 1,\n            \"content\": \"hi\",\n            \"is_deleted\": false,\n            \"created_at\": \"2022-01-25T13:52:20.876259Z\",\n            \"updated_at\": \"2022-01-25T13:52:20.876292Z\",\n            \"user\": 1,\n            \"tweet\": 1\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "127.0.0.1:8000/accounts/follow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"following\": 1,\n    \"follower\" : 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/accounts/follow",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"follow"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "127.0.0.1:8000/feed/follow",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"following\": 1,\n    \"follower\" : 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/accounts/follow",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"follow"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 25 Jan 2022 13:54:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"followed_status\": {\n        \"id\": 2,\n        \"created_at\": \"2022-01-25T13:54:26.586084Z\",\n        \"updated_at\": \"2022-01-25T13:54:26.586120Z\",\n        \"following\": 1,\n        \"follower\": 2\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "127.0.0.1:8000/feed/fetch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/feed/fetch?user_id=2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"feed",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "127.0.0.1:8000/feed/fetch",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/feed/fetch?user_id=2",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"feed",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 25 Jan 2022 13:54:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "851"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"tweets\": [\n        {\n            \"id\": 2,\n            \"comments\": [],\n            \"likes\": [],\n            \"user\": {\n                \"id\": 1,\n                \"first_name\": \"Deepanshu\",\n                \"last_name\": \"Saxena\",\n                \"email\": \"saxenad765@gmail.com\",\n                \"username\": \"saxenad765@gmail.com\",\n                \"image_url\": null\n            },\n            \"content\": \"Hey, Hi 2.0\",\n            \"is_deleted\": false,\n            \"created_at\": \"2022-01-25T13:52:49.475792Z\",\n            \"updated_at\": \"2022-01-25T13:52:49.475825Z\"\n        },\n        {\n            \"id\": 1,\n            \"comments\": [\n                {\n                    \"id\": 1,\n                    \"content\": \"hi\",\n                    \"is_deleted\": false,\n                    \"created_at\": \"2022-01-25T13:52:20.876259Z\",\n                    \"updated_at\": \"2022-01-25T13:52:20.876292Z\",\n                    \"user\": 1,\n                    \"tweet\": 1\n                }\n            ],\n            \"likes\": [],\n            \"user\": {\n                \"id\": 1,\n                \"first_name\": \"Deepanshu\",\n                \"last_name\": \"Saxena\",\n                \"email\": \"saxenad765@gmail.com\",\n                \"username\": \"saxenad765@gmail.com\",\n                \"image_url\": null\n            },\n            \"content\": \"Hey, I just joined it.\",\n            \"is_deleted\": false,\n            \"created_at\": \"2022-01-25T13:51:35.703580Z\",\n            \"updated_at\": \"2022-01-25T13:51:35.703615Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "127.0.0.1:8000/accounts/user/fetch?user_id=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/accounts/user/fetch?user_id=2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"user",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Fetches User using user email"
+			},
+			"response": [
+				{
+					"name": "127.0.0.1:8000/accounts/user/fetch?user_id=2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/accounts/user/fetch?user_id=2",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"user",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 25 Jan 2022 13:55:15 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "193"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_data\": {\n        \"id\": 2,\n        \"first_name\": \"Deepanshu\",\n        \"last_name\": \"2\",\n        \"email\": \"deepanshu2@gmail.com\",\n        \"username\": \"deepanshu2\",\n        \"image_url\": \"/media/profile_pics/None/KrekenD_API_Gateway.png\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "127.0.0.1:8000/accounts/user/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"PR4\",\n    \"last_name\": \"PR4\",\n    \"email\": \"ec4-user@aws.co\",\n    \"username\": \"PR4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/accounts/user/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"user",
+						"create"
+					]
+				},
+				"description": "Creates User using JSON Data"
+			},
+			"response": [
+				{
+					"name": "127.0.0.1:8000/accounts/user/create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"hey\",\n    \"last_name\": \"hey\",\n    \"email\": \"hey@gmail.com\",\n    \"username\": \"hey\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/accounts/user/create",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"accounts",
+								"user",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 25 Jan 2022 13:55:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "129"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_data\": {\n        \"id\": 3,\n        \"first_name\": \"hey\",\n        \"last_name\": \"hey\",\n        \"email\": \"hey@gmail.com\",\n        \"username\": \"hey\",\n        \"image_url\": null\n    }\n}"
+				}
+			]
+		}
+	]
+}
